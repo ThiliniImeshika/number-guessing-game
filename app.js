@@ -5,18 +5,40 @@ let ranNumber=Math.floor(number);
 console.log(ranNumber);
 
 function btnGuessNumberOnAction(){
-Swal.fire({
-  title: "Custom width, padding, color, background.",
-  width: 600,
-  padding: "3em",
-  color: "#1505f2",
-  background: "#fff url(/image/puzzle.jpg)",
-  backdrop: `
-    rgba(0,0,123,0.4)
-    url("https://giphy.com/gifs/StoryLeaf-brain-problem-solving-story-leaf-vTs6IEzlyfbOcoW72O")
-    left top
-    no-repeat
-  `
-});
+  const userInput = Number(document.getElementById("txtUseInput").value);
+
+  if(ranNumber === userInput)
+  {
+  Swal.fire({
+    title: "you won",
+    width: 600,
+    padding: "3em",
+    color: "#1505f2",
+    background: "#fff url(img/puzzle.jpg)",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("img/Thinking Working GIF by Story Leaf.gif")
+      left top
+      no-repeat
+    `
+  });
+}
+  else {
+  Swal.fire({
+    title: "Try Again.",
+    width: 600,
+    padding: "3em",
+    color: "#1505f2",
+    background: "#fff url(/img/puzzle.jpg)",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("")
+      left top
+      no-repeat
+    `
+  });
+  }
+
+
 }
 
