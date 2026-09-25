@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Guessing Game</title>
+    <style>
+        /* Center everything on the viewport using Flexbox */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+
+            background-image: url('img/background.jpg');
+        }
+
+        /* Optional: Add spacing between the input elements */
+        .game-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input[type="text"], input[type="button"] {
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Number Guessing Game</h1>
-    <input type="text" name="Enter your number" id="txtUseInput">
-    <input type="button" value="Guess" onclick="btnGuessNumberOnAction()">
+    
+    <div class="game-wrapper">
+        <input type="text" name="Enter your number" id="txtUseInput" placeholder="Enter a number">
+        <input type="button" value="Guess" onclick="btnGuessNumberOnAction()">
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app.js"></script>
